@@ -11,6 +11,7 @@ houses <- page %>%
   html_elements(".photo-cards li article")
 
 ##z_id <- houses %>% html_attr("id")
+print(houses)
 
 ##address <- houses %>%
 ##  html_element(".zsg-photo-card-address") %>%
@@ -18,10 +19,12 @@ houses <- page %>%
 prices <- c()
 i <- 0
 for(house in houses) {
-  price <- houses[i] %>%
+  price <- house %>%
     html_element(xpath="//div/div[1]/div[2]/span") %>%
     html_text() %>%
     readr::parse_number()
+  print(house)
+  print(price)
   append(prices, price)
   i <- i + 1
 }
@@ -29,5 +32,5 @@ for(house in houses) {
 ##  html_element(".zsg-photo-card-info") %>%
 ##  html_text() %>%
 ##  strsplit("\u00b7")
-prices
-# 
+# print(prices)
+#
