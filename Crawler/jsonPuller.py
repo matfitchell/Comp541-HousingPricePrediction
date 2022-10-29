@@ -1,4 +1,9 @@
 import http.client
+from urllib.parse import urlencode
+
+queryState = {"pagination":{"currentPage":2},"usersSearchTerm":"Los Angeles, CA","mapBounds":{"west":-119.44444734375,"east":-113.01744539062501,"south":32.757531675134366,"north":35.104452906128245},"regionSelection":[{"regionId":12447,"regionType":6}],"isMapVisible":true,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":true},"isManufactured":{"value":false},"isLotLand":{"value":false},"isTownhouse":{"value":false}},"isListVisible":true,"mapZoom":8}
+
+wants = {"pagination":{"currentPage":2},"usersSearchTerm":"Los Angeles, CA","mapBounds":{"west":-119.44444734375,"east":-113.01744539062501,"south":32.757531675134366,"north":35.104452906128245},"regionSelection":[{"regionId":12447,"regionType":6}],"isMapVisible":true,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":true},"isManufactured":{"value":false},"isLotLand":{"value":false},"isTownhouse":{"value":false}},"isListVisible":true,"mapZoom":8}
 
 conn = http.client.HTTPSConnection("www.zillow.com")
 
