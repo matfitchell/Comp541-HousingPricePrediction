@@ -4,11 +4,11 @@ library(dplyr)
 #library(stringr)
 library(rjson)
 
-readIn =  fromJSON (file = "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\la_zillow_request.json")
+readIn =  fromJSON (file = "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\new_JSON_read_files\\json_dump.json")
 
 names = c("zpid", "id","providerListingId","imgSrc","hasImage","detailUrl","statusType","statusText","countryCurrency","price","unformattedPrice","address","addressStreet","addressCity","addressState","addressZipcode","isUndisclosedAddress","beds","baths","area","latLong", "isZillowOwned", "variableData", "badgeInfo", "hdpData", "isSaved", "hasOpenHouse", "openHouseStartDate", "openHouseEndDate", "openHouseDescription", "isUserClaimingOwner", "isUserConfirmedClaim", "pgapt", "sgapt", "zestimate", "shouldShowZestimateAsPrice", "has3DModel", "hasVideo", "isHomeRec", "brokerName", "hasAdditionalAttributions", "isFeaturedListing", "availabilityDate", "list", "relaxed")
 
-mylist = readIn$cat1$searchResults$listResults
+mylist = readIn
 
 dataFrame = data.frame(matrix(ncol = 5 , nrow = 0))
 colnames(dataFrame) = c("price", "address", "bed", "bath", "area")
