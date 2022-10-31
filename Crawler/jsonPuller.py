@@ -14,7 +14,12 @@ for pageNumber in range(1,21):
 
     #filename = './new_JSON_read_files/chicago_json_file_pg_%s.json' %pageNumber
 
-    filename = './new_JSON_read_files/seattle_json_file_pg_%s.json' %pageNumber
+    #filename = './new_JSON_read_files/portland_json_file_pg_%s.json' %pageNumber
+
+    #filename = './new_JSON_read_files/tampa_json_file_pg_%s.json' %pageNumber
+
+    filename = './new_JSON_read_files/baltimore_json_file_pg_%s.json' %pageNumber
+
     
     
     #LA 
@@ -35,10 +40,17 @@ for pageNumber in range(1,21):
 
     #wants ={"cat1":["listResults","mapResults"],"cat2":["total"]}
 
-    #Seattle
-    queryState ={"pagination":{},"usersSearchTerm":"Seattle, WA","mapBounds":{"west":-122.88449936914063,"east":-121.80509263085938,"south":47.43604571215944,"north":47.789693900848064},"regionSelection":[{"regionId":16037,"regionType":6}],"isMapVisible":True,"filterState":{"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True}},"isListVisible":True}
+    #Portland
+    #queryState ={"pagination":{"currentPage":2},"usersSearchTerm":"Portland, OR","mapBounds":{"west":-122.919539,"east":-122.471849,"south":45.395871,"north":45.714497},"regionSelection":[{"regionId":13373,"regionType":6}],"isMapVisible":False,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
+    #wants = {"cat1":["listResults"],"cat2":["total"]}
 
-    wants = {"cat1":["mapResults"]}
+    #Tampa
+    #queryState = {"pagination":{"currentPage":2},"usersSearchTerm":"Tampa, FL","mapBounds":{"west":-83.25765574414064,"east":-81.65090525585939,"south":27.681931008465693,"north":28.306420078252618},"regionSelection":[{"regionId":41176,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
+    #wants = {"cat1":["listResults","mapResults"],"cat2":["total"]}
+
+    #Baltimore
+    queryState = {"pagination":{"currentPage":2},"usersSearchTerm":"Baltimore, MD","mapBounds":{"west":-77.02217362207031,"east":-76.21879837792969,"south":39.16008602472207,"north":39.43374473444153},"regionSelection":[{"regionId":3523,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+    wants = {"cat1":["listResults","mapResults"],"cat2":["total"]}
 
     params = {'searchQueryState' : queryState, 'wants' : wants}
 
