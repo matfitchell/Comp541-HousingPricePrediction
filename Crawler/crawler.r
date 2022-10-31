@@ -10,16 +10,40 @@ names = c("zpid", "id","providerListingId","imgSrc","hasImage","detailUrl","stat
 
 mylist = readIn
 
-dataFrame = data.frame(matrix(ncol = 5 , nrow = 0))
-colnames(dataFrame) = c("price", "address", "bed", "bath", "area")
+dataFrame = data.frame(matrix(ncol = 8 , nrow = 0))
+colnames(dataFrame) = c("ZPID","address", "price", "bed", "bath", "Sq.Feet","city", "zip-code")
 for(i in 1:length(mylist)){
-  price = mylist[[i]]$unformattedPrice
-  address = mylist[[i]]$address
-  bed = mylist[[i]]$bed
-  bath = mylist[[i]]$bath
-  area = mylist[[i]]$area
-  print(c(price, address, bed, bath, area))
- dataFrame[nrow(dataFrame) + 1,] = c(price, address, bed, bath, area)
+  zpid = mylist[[i]]$zpid
+  if (is.null(mylist[[i]]$unformattedPrice) == FALSE)
+    price = mylist[[i]]$unformattedPrice
+  else 
+    price = 0
+  if (is.null(mylist[[i]]$address) == FALSE)
+    address = mylist[[i]]$address
+  else
+    address ='empty'
+  if (is.null(mylist[[i]]$bed) == FALSE)
+    bed = mylist[[i]]$bed
+  else
+    bath = 0
+  if (is.null(mylist[[i]]$baths) == FALSE)
+    bath = mylist[[i]]$baths
+  else
+    bath = 0
+  if (is.null(mylist[[i]]$area) == FALSE)
+    area = mylist[[i]]$area
+  else
+    area = 0
+  if (is.null(mylist[[i]]$addressCity) ==FALSE)
+    city = mylist[[i]]$addressCity
+  else 
+    city = 'empty'
+  if (is.null(mylist[[i]]$addressZipcode) == FALSE)
+    zipCode = mylist[[i]]$addressZipcode
+  else 
+    zipCode = 0
+  #print(c(price, address, bed, bath, area))
+ dataFrame[nrow(dataFrame) + 1,] = c(zpid, address, price, bed, bath, area, city, zipCode)
 }
 
 #dataFrame <- setNames(do.call(rbind.data.frame, mylist), names)
