@@ -1,0 +1,7 @@
+#dataFrame <- setNames(do.call(rbind.data.frame, mylist), names)
+#dataFrame = mylist %>% as_tibble(rownames = pkgconfig::get_config("tibble::rownames", NULL), .name_repair = c("zpid", "id","providerListingId","imgSrc","hasImage","detailUrl","statusType","statusText","countryCurrency","price","unformattedPrice","address","addressStreet","addressCity","addressState","addressZipcode","isUndisclosedAddress","beds","baths","area","latLong", "isZillowOwned", "variableData", "badgeInfo", "hdpData", "isSaved", "hasOpenHouse", "openHouseStartDate", "openHouseEndDate", "openHouseDescription", "isUserClaimingOwner", "isUserConfirmedClaim", "pgapt", "sgapt", "zestimate", "shouldShowZestimateAsPrice", "has3DModel", "hasVideo", "isHomeRec", "brokerName", "hasAdditionalAttributions", "isFeaturedListing", "availabilityDate", "list", "relaxed"))
+
+#str(dataFrame)
+
+#dframe = as.data.frame(readIn)
+#str(dframe)
