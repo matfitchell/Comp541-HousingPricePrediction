@@ -24,8 +24,13 @@ for pageNumber in range(1,21):
 
     #filename = './new_JSON_read_files/richmondva_json_file_pg_%s.json' %pageNumber
 
-    filename = './new_JSON_read_files/spokane_json_file_pg_%s.json' %pageNumber
+    #filename = './new_JSON_read_files/spokane_json_file_pg_%s.json' %pageNumber
 
+    #filename = './new_JSON_read_files/lasvegas_json_file_pg_%s.json' %pageNumber
+
+    #filename = './new_JSON_read_files/greenbay_json_file_pg_%s.json' %pageNumber
+
+    filename = './new_JSON_read_files/stlouis_json_file_pg_%s.json' %pageNumber
 
     #assign params for JSON pull request based on city
     #LA 
@@ -44,7 +49,6 @@ for pageNumber in range(1,21):
     #Detroit
     #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Detroit, MI","mapBounds":{"west":-83.30004881103517,"east":-82.89836118896486,"south":42.28742000693798,"north":42.4180853903611},"regionSelection":[{"regionId":17762,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":12}
 
-
     #Topeka
     #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Topeka, KS","mapBounds":{"west":-96.56166524414063,"east":-94.95491475585938,"south":38.80148868204754,"north":39.35052538887739},"regionSelection":[{"regionId":41256,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
 
@@ -52,8 +56,16 @@ for pageNumber in range(1,21):
     #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Richmond, VA","mapBounds":{"west":-77.89494912207032,"east":-77.09157387792969,"south":37.384382837793154,"north":37.66483727795263},"regionSelection":[{"regionId":6752,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
 
     #Spokane
-    queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Spokane, WA","mapBounds":{"west":-118.23666074414062,"east":-116.62991025585937,"south":47.43389612708519,"north":47.91013155265828},"regionSelection":[{"regionId":20604,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
+    #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Spokane, WA","mapBounds":{"west":-118.23666074414062,"east":-116.62991025585937,"south":47.43389612708519,"north":47.91013155265828},"regionSelection":[{"regionId":20604,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
 
+    #Las Vegas
+    #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Las Vegas, NV","mapBounds":{"west":-116.91755348828124,"east":-113.70405251171874,"south":35.64420017467124,"north":36.78538246207047},"regionSelection":[{"regionId":18959,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":9}
+
+    #Green Bay
+    #queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Green Bay, WI","mapBounds":{"west":-88.3527676220703,"east":-87.54939237792968,"south":44.43227951010534,"north":44.68424809978317},"regionSelection":[{"regionId":45548,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+    
+    queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Saint Louis, MO","mapBounds":{"west":-90.65190012207032,"east":-89.84852487792969,"south":38.51499098681778,"north":38.79114908607131},"regionSelection":[{"regionId":6891,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+    
     #wants for get request
     wants = {"cat1":["listResults","mapResults"],"cat2":["total"]}
 
