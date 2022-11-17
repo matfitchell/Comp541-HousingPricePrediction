@@ -5,7 +5,7 @@ library(dplyr)
 library(rjson)
 
 #Read in the compiled JSON file of all houses in data set // Should be downloaded to local memory 
-readIn =  fromJSON (file = "C:\\UserDump\\Code\\Comp541-HousingPricePrediction\\Crawler\\new_JSON_read_files\\json_dump.json")
+readIn =  fromJSON (file = "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\new_JSON_read_files\\json_dump.json")
 
 #set a variable list
 mylist = readIn
@@ -58,4 +58,5 @@ for(i in 1:length(mylist)){
  dataFrame[nrow(dataFrame) + 1,] = c(zpid, address, price, bed, bath, area, city, zipCode)
 }
 #write dataFrame to CSV file for later reference
-#write.csv(dataFrame, "C:\\UserDump\\Code\\Comp541-HousingPricePrediction\\housing_data")
+write.csv(dataFrame, "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\housing_data")
+View(dataFrame)
