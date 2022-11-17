@@ -30,7 +30,12 @@ for pageNumber in range(1,21):
 
     #filename = './new_JSON_read_files/greenbay_json_file_pg_%s.json' %pageNumber
 
-    filename = './new_JSON_read_files/stlouis_json_file_pg_%s.json' %pageNumber
+    #filename = './new_JSON_read_files/stlouis_json_file_pg_%s.json' %pageNumber
+
+    #filename = './new_JSON_read_files/raleigh_json_file_pg_%s.json' %pageNumber
+
+    filename = './new_JSON_read_files/atlanta_json_file_pg_%s.json' %pageNumber
+
 
     #assign params for JSON pull request based on city
     #LA 
@@ -49,7 +54,7 @@ for pageNumber in range(1,21):
     #Detroit
     #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Detroit, MI","mapBounds":{"west":-83.30004881103517,"east":-82.89836118896486,"south":42.28742000693798,"north":42.4180853903611},"regionSelection":[{"regionId":17762,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":12}
 
-    #Topeka
+    #TopekapageNumber
     #queryState = {"pagination":{"currentPage": pageNumber},"usersSearchTerm":"Topeka, KS","mapBounds":{"west":-96.56166524414063,"east":-94.95491475585938,"south":38.80148868204754,"north":39.35052538887739},"regionSelection":[{"regionId":41256,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
 
     #Richmond VA
@@ -64,8 +69,15 @@ for pageNumber in range(1,21):
     #Green Bay
     #queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Green Bay, WI","mapBounds":{"west":-88.3527676220703,"east":-87.54939237792968,"south":44.43227951010534,"north":44.68424809978317},"regionSelection":[{"regionId":45548,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
     
-    queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Saint Louis, MO","mapBounds":{"west":-90.65190012207032,"east":-89.84852487792969,"south":38.51499098681778,"north":38.79114908607131},"regionSelection":[{"regionId":6891,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+    #St Louis
+    #queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Saint Louis, MO","mapBounds":{"west":-90.65190012207032,"east":-89.84852487792969,"south":38.51499098681778,"north":38.79114908607131},"regionSelection":[{"regionId":6891,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
     
+    #Raleigh NC
+    #queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Raleigh, NC","mapBounds":{"west":-79.42886424414063,"east":-77.82211375585938,"south":35.499307812158406,"north":36.073023527099686},"regionSelection":[{"regionId":54047,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
+    
+    #Atlanta 
+    queryState = {"pagination":{"currentPage":2},"usersSearchTerm":"Atlanta, GA","mapBounds":{"west":-84.86060462207031,"east":-84.05722937792969,"south":33.61333642781819,"north":33.90732669652047},"regionSelection":[{"regionId":37211,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+        
     #wants for get request
     wants = {"cat1":["listResults","mapResults"],"cat2":["total"]}
 
