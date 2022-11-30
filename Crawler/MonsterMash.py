@@ -2,7 +2,7 @@
 import json
 
 #create array of cities for file naming // file access 
-cities = ['atlanta','baltimore','chicago', 'detroit','greenbay', 'dallas','lasvegas', 'new_york','portland','raleigh','richmondva','spokane','stlouis','tampa','topeka']
+cities = ['atlanta','baltimore','chicago', 'detroit','greenbay', 'dallas','lasvegas', 'new_york','portland','raleigh','richmondva','sacramento','spokane','stlouis','tampa','topeka']
 
 #create empty array to hold houses to append to final JSON
 houses = []
