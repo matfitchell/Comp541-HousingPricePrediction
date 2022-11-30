@@ -36,7 +36,9 @@ for pageNumber in range(1,21):
 
     #filename = './new_JSON_read_files/atlanta_json_file_pg_%s.json' %pageNumber
 
-    filename = './new_JSON_read_files/sacramento_json_file_pg_%s.json' %pageNumber
+    #filename = './new_JSON_read_files/sacramento_json_file_pg_%s.json' %pageNumber
+
+    filename = './new_JSON_read_files/austin_json_file_pg%s.json' %pageNumber
 
 
     #assign params for JSON pull request based on city
