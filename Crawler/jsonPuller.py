@@ -34,7 +34,9 @@ for pageNumber in range(1,21):
 
     #filename = './new_JSON_read_files/raleigh_json_file_pg_%s.json' %pageNumber
 
-    filename = './new_JSON_read_files/atlanta_json_file_pg_%s.json' %pageNumber
+    #filename = './new_JSON_read_files/atlanta_json_file_pg_%s.json' %pageNumber
+
+    filename = './new_JSON_read_files/sacramento_json_file_pg_%s.json' %pageNumber
 
 
     #assign params for JSON pull request based on city
@@ -76,7 +78,10 @@ for pageNumber in range(1,21):
     #queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Raleigh, NC","mapBounds":{"west":-79.42886424414063,"east":-77.82211375585938,"south":35.499307812158406,"north":36.073023527099686},"regionSelection":[{"regionId":54047,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True}
     
     #Atlanta 
-    queryState = {"pagination":{"currentPage":2},"usersSearchTerm":"Atlanta, GA","mapBounds":{"west":-84.86060462207031,"east":-84.05722937792969,"south":33.61333642781819,"north":33.90732669652047},"regionSelection":[{"regionId":37211,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+    #queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Atlanta, GA","mapBounds":{"west":-84.86060462207031,"east":-84.05722937792969,"south":33.61333642781819,"north":33.90732669652047},"regionSelection":[{"regionId":37211,"regionType":6}],"isMapVisible":True,"filterState":{"beds":{"min":1},"baths":{"min":1},"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True},"isManufactured":{"value":False},"isLotLand":{"value":False},"isTownhouse":{"value":False}},"isListVisible":True,"mapZoom":11}
+    
+    #Sacramento
+    queryState = {"pagination":{"currentPage":pageNumber},"usersSearchTerm":"Sacramento, CA","mapBounds":{"west":-121.73570168457032,"east":-121.19599831542969,"south":38.50632517316481,"north":38.71129147783643},"regionSelection":[{"regionId":20288,"regionType":6}],"isMapVisible":True,"filterState":{"sortSelection":{"value":"globalrelevanceex"},"isAllHomes":{"value":True}},"isListVisible":True,"mapZoom":11}
         
     #wants for get request
     wants = {"cat1":["listResults","mapResults"],"cat2":["total"]}
