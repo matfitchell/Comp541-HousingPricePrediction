@@ -1,12 +1,12 @@
 # installing/loading the package:
-if(!require(installr)) {
-install.packages("installr"); require(installr)} #load / install+load installr
+#if(!require(installr)) {
+#install.packages("installr"); require(installr)} #load / install+load installr
 
 # using the package:
-updateR() # this will start the updating process of your R installation.  It will check for newer versions, and if one is available, will guide you through the decisions you'd need to make.
+#updateR() # this will start the updating process of your R installation.  It will check for newer versions, and if one is available, will guide you through the decisions you'd need to make.
 dataset <- read.csv("C:/UserDump/Code/Comp541-HousingPricePrediction/Crawler/housing_data")
 
-install.packages("caTools")
+#install.packages("caTools")
 library(caTools)
 
 split = sample.split(dataset$Sq.Feet, SplitRatio = 0.7)
@@ -19,7 +19,7 @@ coef(lm.r)
 
 ypred = predict(lm.r, newdata = testset)
 
-install.packages("ggplot2")
+#install.packages("ggplot2")
 library(ggplot2)
 
 ggplot() + geom_point(aes(x = trainingset$bed,
