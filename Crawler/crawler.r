@@ -58,4 +58,4 @@ for(i in 1:length(mylist)){
  dataFrame[nrow(dataFrame) + 1,] = c(zpid, address, price, bed, bath, area, city, zipCode)
 }
 #write dataFrame to CSV file for later reference
-#write.csv(dataFrame, "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\housing_data"
+#write.csv(dataFrame, "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\housing_data")
