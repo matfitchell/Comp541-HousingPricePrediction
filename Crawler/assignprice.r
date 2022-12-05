@@ -5,22 +5,22 @@ data_frame <- read.csv("D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingP
 
 data_frame_2 <- read.csv("D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\latlongdata.csv")
 
-price = data_frame(c(3),)
+price <- data_frame(c(3), )
 
-output_dataframe = data.frame(matrix(ncol = 5 , nrow = 0))
+output_dataframe <- data.frame(matrix(ncol = 5 , nrow = 0))
 
-colnames(output_dataframe) = c("Address","Long","Lat","address","Price")
+colnames(output_dataframe) <= c("address", "long", "lat", "address", "price")
 
 for (i in seq_along(latlongdata.csv)){
-    Address = latlongdata.csv[[i]]$Address
+    address <- latlongdata.csv[[i]]$Address
 
-    Long = latlongdata.csv[[i]]$lon
+    long <- latlongdata.csv[[i]]$lon
 
-    Lat = latlongdata.csv[[i]]$Lat
+    lat <- latlongdata.csv[[i]]$Lat
 
-    address = latlongdata.csv[[i]]$address
+    address <- latlongdata.csv[[i]]$address
 
-    Price = housing_data.csv[[i]]$price
+    price <- housing_data.csv[[i]]$price
     }
 
 #write output dframe to file
