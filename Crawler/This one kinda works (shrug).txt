@@ -1,9 +1,0 @@
-install.packages("dplyr")
-library(rvest)
-library(dplyr)
-
-link = "https://www.zillow.com/homes/Los-Angeles_rb/"
-page = read_html(link)
-
-house_id = page %>% html_nodes('.hRqIYX span') %>% html_text()
-print(house_id)
