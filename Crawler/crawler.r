@@ -11,9 +11,9 @@ readIn =  fromJSON (file = "D:\\Coding\\541_dataHousingPredictions\\Comp541-Hous
 mylist = readIn
 
 #Initialize a dataframe with 7 columns for relavant data per house
-dataFrame = data.frame(matrix(ncol = 8 , nrow = 0))
+dataFrame = data.frame(matrix(ncol = 10 , nrow = 0))
 #set the column names
-colnames(dataFrame) = c("ZPID","address", "price", "bed", "bath", "Sq.Feet","city", "zip-code")
+colnames(dataFrame) = c("ZPID","address", "price", "bed", "bath", "Sq.Feet","city", "zip-code", "latitude", "longitude")
 #iterate over every house in the list 
 for(i in 1:length(mylist)){
   #set house id
@@ -53,9 +53,19 @@ for(i in 1:length(mylist)){
     zipCode = mylist[[i]]$addressZipcode
   else 
     zipCode = 0
+  if (is.null(mylist[[i]]$latitude) == FALSE)
+    latitude = mylist[[i]]$latitude
+  else {
+     latitude = 0
+  }
+  if (is.null(mylist[[i]]$longitude) == FALSE)
+    longitude = mylist[[i]]$longitude
+  else {
+     longitude = 0
+  }
   #print entry to console to troubleshoot as error checking
   #print(c(price, address, bed, bath, area))
- dataFrame[nrow(dataFrame) + 1,] = c(zpid, address, price, bed, bath, area, city, zipCode)
+ dataFrame[nrow(dataFrame) + 1,] = c(zpid, address, price, bed, bath, area, city, zipCode, latitude, longitude)
 }
 #write dataFrame to CSV file for later reference
-#write.csv(dataFrame, "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\housing_data")
+write.csv(dataFrame, "D:\\Coding\\541_dataHousingPredictions\\Comp541-HousingPricePrediction\\Crawler\\housing_data.csv")
